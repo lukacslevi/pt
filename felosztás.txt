@@ -1,0 +1,29 @@
+5	8  bal felső
+47	64 jobb felső
+28	32 bal alsó
+11	16 jobb alsó
+2	4  WAN-kapcsolat
+
+a rendelkezésre álló IP-tartomány: 10.1.1.0/24
+
+csökkenő sorrendben kiosztjuk a fenti méretek alapján:
+
+jobb felső hálózat:
+10.1.1.0   -   10.1.1.63  255.255.255.192 /26
+router: 1, switch: 2, PC: 62
+
+bal alsó hálózat:
+10.1.1.64  -   10.1.1.95  255.255.255.224 /27
+router: 65, switch: 66, PC: 94
+
+jobb alsó hálózat:
+10.1.1.96  -   10.1.1.111 255.255.255.240 /28
+router: 97, switch: 98, PC: 110
+
+bal felső hálózat:
+10.1.1.112 -   10.1.1.119 255.255.255.248 /29
+router: 113, switch: 114, PC: 118
+
+WAN-kapcsolat:
+10.1.1.120 -   10.1.1.123 255.255.255.252 /30
+HQ: 121, Remote: 122
